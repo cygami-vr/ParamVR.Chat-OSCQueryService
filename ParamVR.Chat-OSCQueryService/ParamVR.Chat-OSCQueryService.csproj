@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>ParamVR.Chat_OSCQueryService</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+	
+  <ItemGroup>
+    <PackageReference Include="MeaMod.DNS" Version="1.0.70" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NLog" Version="5.2.3" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="5.3.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="vrc-oscquery-lib">
+      <HintPath>..\..\vrc-oscquery-lib\vrc-oscquery-lib\bin\Debug\net6.0\vrc-oscquery-lib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="nlog.config" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+
+</Project>
